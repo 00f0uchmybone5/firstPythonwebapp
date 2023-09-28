@@ -5,11 +5,6 @@ from django.urls import reverse
 from .models import Question
 
 
-def home(request):
-    home = "Welcome Home."
-    return render(request, home, "home/index.html")
-
-
 def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
     context = {"latest_question_list": latest_question_list}
