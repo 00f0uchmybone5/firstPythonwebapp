@@ -3,6 +3,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Welcome home. Please make a choice.")
+    return HttpResponse(include("/home/ty/mysite/home/index.html"))
 
 # Create your views here.
