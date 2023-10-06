@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.urls import reverse
 
 
 def index(request):
-    return HttpResponse(include("/home/ty/mysite/home/index.html"))
+    return render(request, ("/home/ty/mysite/home/index.html"))
 
 # Create your views here.
